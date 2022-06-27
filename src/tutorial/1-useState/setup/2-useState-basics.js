@@ -8,7 +8,7 @@ const UseStateBasics = () => {
 
   const [text, setText] = useState('random title')
   const handleOnClick = () => {
-    setText('gwe gwe gwe');
+    setText(90888);
   }
   return <React.Fragment>
             <button type='button' className='btn' onClick={handleOnClick}>Change Title</button>
