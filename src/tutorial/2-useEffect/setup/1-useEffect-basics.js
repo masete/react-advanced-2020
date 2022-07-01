@@ -3,9 +3,18 @@ import React, { useState, useEffect, Component } from 'react';
 // cleanup function
 // second parameter
 const UseEffectBasics = () => {
-  console.log('callUseEffect')
-  return <h2>useEffect Basics</h2>;
-  console.log('render Component')
+  const [count, setCount] = useState(0);
+
+  useEffect(()  => {
+    if (count > 1) {
+      document.title = `New message (${count})`;
+    }
+    
+  })
+  return <>
+          <h2>{count}</h2>
+            <button className='btn' onClick={()=> setCount(count + 1)}>Increase</button>
+         </>
 };
 
 export default UseEffectBasics;
