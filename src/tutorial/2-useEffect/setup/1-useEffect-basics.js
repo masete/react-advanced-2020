@@ -10,7 +10,12 @@ const UseEffectBasics = () => {
       document.title = `New message (${count})`;
     }
     
-  })
+  }, [count])
+
+  useEffect(() => {
+    console.log('print us');
+  }, []);
+
   return <>
           <h2>{count}</h2>
             <button className='btn' onClick={()=> setCount(count + 1)}>Increase</button>
